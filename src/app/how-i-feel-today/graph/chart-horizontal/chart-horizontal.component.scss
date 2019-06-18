@@ -1,0 +1,50 @@
+.title {
+    height: 7.4vh;
+    font-family: Karla;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4a4a4a;
+    display: flex;
+    justify-content: baseline;  
+    span {
+      box-sizing: border-box;
+      width: 100%;
+      text-align: left;
+      padding-top: 40px;    
+    }
+  }
+  
+  .container {
+    background-color: #ffffff;
+    height: 31.5vh;
+    width: 612px;
+    margin-bottom: 7vh;
+    box-shadow: 0 2px 8px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    display: flex; 
+    box-sizing: border-box;
+    justify-content: center;
+  }
+  
+  canvas {
+    margin-top: 37px;
+
+  } 
+  
+  .images-container {
+    display: flex;  
+    justify-content: space-around;  
+    text-align: center;
+  }
+  
+  .percent{
+      padding-top: 10px;
+      text-align: center;    
+  }
+  
+  
+  

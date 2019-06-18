@@ -1,0 +1,105 @@
+.kudo-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 65px;
+    grid-template-areas: 'user user user user';
+    width: 280px;
+    margin-bottom: 28px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px -4px rgba(0, 0, 0, 0.25);
+}
+
+.header {
+    grid-area: user;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 65px;
+}
+
+.tinted-image {
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.image-text {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-position: center;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+}
+
+.user-name {
+    margin: 0 3px 0 9px;
+    .from {
+        width: 110px;
+        height: 40px;
+        font-family: Karla;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.43;
+        letter-spacing: normal;
+        color: #4a4a4a;
+    }
+    .to {
+        font-family: Karla;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.43;
+        letter-spacing: normal;
+        color: #4a4a4a;
+    }
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.kudo-logo {
+    margin-right: 15px;
+}
+
+@media only screen and (max-width: 1910px) {
+    .kudo-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 65px;
+        grid-template-areas: 'user user user user';
+        width: 612px;
+        margin-bottom: 28px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px -4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .kudo-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 65px;
+        grid-template-areas: 'user user user user';
+        width: 280px;
+        margin-bottom: 28px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px -4px rgba(0, 0, 0, 0.25);
+    }
+}

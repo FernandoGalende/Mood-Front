@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.tinted-image {
+  grid-area: photo;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(rgba(0, 95, 255, 0.7), rgba(0, 95, 255, 0.7));
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin: 50px 0px 30px 0px;
+}
+
+.image-text {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background-position: center;
+  width: 80px;
+  height: 80px;
+  background-size: contain;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logout {
+  grid-area: logout;
+  cursor: pointer;
+  width: 234px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: #ffd800;
+  border: 0;
+  outline: none;
+
+  align-items: center;
+}
+
+.logout-message {
+  width: 106px;
+  height: 19px;
+  font-family: Karla;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #4a4a4a;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0px 0px 8px 0px;
+}
+
+.email {
+  font-size: 16px;
+  margin: 0px 0px 30px 0px;
+}
+
+@media only screen and (min-width: 1150px) {
+    .container {
+        display: none;
+        padding-left: 0vw;
+        width: 0vw;
+    }
+}

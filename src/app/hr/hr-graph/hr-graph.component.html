@@ -1,0 +1,17 @@
+<label class="title">
+  <span>Mood Chart</span>
+</label>
+
+<div class="hr-graph" *ngIf="!showError">
+  <div class="content" *ngIf="showChart">
+    <div class="people-title">
+      <span>{{votes}} votes</span>
+    </div>
+    <app-chart-horizontal [graphData]="graphData"></app-chart-horizontal>
+  </div>
+</div>
+<div class="placeholder-container" *ngIf="showError">
+  <div class="placeholder">
+    <span>Something went wrong, please try again later</span>
+  </div>
+</div>

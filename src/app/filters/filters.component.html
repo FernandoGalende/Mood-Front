@@ -1,0 +1,19 @@
+<div class="filters-component">
+    <label class="filters-component__title" (click)="isCollapsed = !isCollapsed" data-toggle="collapse" href="#filters">
+        <p>
+            Filters<span class="filters-component__title arrow" [ngClass]="{'up': !isCollapsed, 'down': isCollapsed}"></span>
+            <span class="caret"></span>
+        </p>
+    </label>
+
+    <div id="filters" class="filters-component__filters collapse show">
+        <div class="filters-component__wrapper">
+            <app-users-filter *ngIf="showUsersFilter" (usersChange)="onUsersFilterChange($event)"></app-users-filter>
+            <app-date-filter *ngIf="showDateFilter" (dateChanged)="onDateFilterChange($event)" class="filters-component__date-filter"></app-date-filter>
+
+            <div *ngIf="showDateFilter" [ngClass]="{'filters-component__error-active': dateError}" class="filters-component__error">
+                <p class="filters-component__error-msg">'To' date can not be less than 'From' date. </p>
+            </div>
+        </div>
+    </div>
+</div>

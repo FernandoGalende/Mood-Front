@@ -1,0 +1,23 @@
+<label class="title">How do I feel today?</label>
+<div class="placeholder-container" *ngIf="!ready && showError">
+  <div class="placeholder">
+    <span>Something went wrong, please try again later</span>
+  </div>
+</div>
+<div class="container" *ngIf="!blocked && ready && !showError">
+  <div class="container-up">
+    <app-mood class="upper-left" [name]="'awesome'" (click)="onMoodSelect('awesome')"></app-mood>
+    <app-mood class="upper-middle" [name]="'pretty-good'" (click)="onMoodSelect('pretty-good')"></app-mood>
+    <app-mood class="upper-right" [name]="'meh'" (click)="onMoodSelect('meh')"></app-mood>
+  </div>
+  <div class="container-down">
+    <app-mood class="bottom-left" [name]="'not-great'" (click)="onMoodSelect('not-great')"></app-mood>
+    <app-mood class="bottom-right" [name]="'terrible'" (click)="onMoodSelect('terrible')"></app-mood>
+  </div>
+</div>
+<div class="placeholder-container" *ngIf="blocked && ready && !showError">
+  <img src="assets/images/awesome.svg">
+  <div class="placeholder">
+    <span>You have already voted today, come back tomorrow for more!</span>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="datepicker">
+    <div class="datepicker__form-group">
+        <label for="From" class="datepicker__label">From:</label>
+        <input id="from" class="form-control datepicker__dateinput" type="date" [value]='fromDate' (input)="fromDate = $event.target.value"
+            (change)="onDateChanged()" />
+    </div>
+    <div class="datepicker__form-group">
+        <label for="to" class="datepicker__label">To:</label>
+        <input if="to" class="form-control datepicker__dateinput" type="date" [value]='toDate' (input)="toDate = $event.target.value"
+            (change)="onDateChanged()" />
+    </div>
+</div>

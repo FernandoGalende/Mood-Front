@@ -1,0 +1,40 @@
+<div class="nav-container" (window:resize)="onResize($event)">
+  <div class="logo">
+    <a routerLink="/" (click)="onHideMenu()">
+      <img src="assets/images/mood-logo.svg">
+    </a>
+  </div>
+  <div class="navbar-icons" *ngIf="show()">
+    <div class="wrapper">
+      <div class="notifications">
+        <div (click)="toggleDropdownNotifications()">
+          <img src="assets/images/notification.svg" alt="" (click)="windowWidth >= 1150 ? toggleDropdownUser() : changeProfile()">
+          <div class="notifications__number" *ngIf="notificationsNumber > 0">
+            <span>
+              {{ notificationsNumber }}
+            </span>
+          </div>
+        </div>
+        <div class="dropdown__notifications" *ngIf="showNotifications  && notificationsNumber > 0">
+          <app-notifications-dropdown [notifications]="notifications" (updateDropdown)="handleCloseDropdown($event)"></app-notifications-dropdown>
+        </div>
+      </div>
+
+      <div class="dropdown-button" (click)="windowWidth >= 1150 ? toggleDropdownUser() : changeProfile()">
+        <div>
+          <img class="user-image" [ngClass]="showProfile ? 'user-image-selected' : 'user-image'" src="{{userInfo.picture}}" alt="">
+        </div>
+        <div class="dropdown" *ngIf="show() && dropdown">
+          <app-profile-dropdown (handleLogout)="handleLogout()"></app-profile-dropdown>
+        </div>
+
+        <div class="name">
+          <span>{{ userInfo.given_name }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="menu-icon">
+      <span [ngClass]="hideMenu ? 'cross' : 'burger'" (click)="changeShowStatus()"></span>
+    </div>
+  </div>
+</div>

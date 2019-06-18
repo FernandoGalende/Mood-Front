@@ -1,0 +1,23 @@
+:host(.hr-dashboard) {
+    grid-area: content;
+    align-self: start;
+    justify-self: start;
+    grid-column-start: 5;
+    grid-column-end: 13;
+}
+
+.hr-dashboard-container {
+    min-width: 765px;
+    display: grid;
+    // grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        'filters filters filters'
+        'graph graph graph'
+        'moods moods moods';
+    margin-top: 5vh;
+}
+
+app-mood-messages {
+    width: 100%
+}

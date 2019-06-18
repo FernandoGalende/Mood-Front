@@ -1,0 +1,19 @@
+<!-- Navbar y router outlet anteriores disponibles en el commit : ea4889ce35bad344129bcf7214ea696a3f99892d -->
+<div class="top_bar" [ngClass]="{
+  'env_localhost': env_barname == 'LOCALHOST',
+  'env_development': env_barname == 'DEVELOPMENT',
+  'env_production': env_barname == 'PRODUCTION'}"
+  *ngIf="showBar">
+  Currently targeting {{env_barname}} environment
+</div>
+
+<div class="grid-container">
+  <app-sidebar class="sidebar" [hidden]="hideSidebar()"></app-sidebar>
+  <app-messages (remove)="onRemove()" [message]="message" *ngIf="showMessage" [ngClass]="{ 'mood-message': isMood} "></app-messages>
+  <app-navbar (displayProfile)="onShowProfile($event)" (displayMenu)="onShowMenu($event)" [hideMenu]="displayMenu"
+    class="navbar"></app-navbar>
+  <app-mobile-menu (clickMenu)="onClickMenu()" *ngIf="displayMenu " class="mobile-menu" [@slideInOut]></app-mobile-menu>
+  <app-menu-profile (profileLogout)="onLogoutProfile()" (profileMenu)="onProfileMenu()" *ngIf="displayProfile" class="mobile-menu"
+    [@slideInOut]></app-menu-profile>
+  <router-outlet></router-outlet>
+</div>

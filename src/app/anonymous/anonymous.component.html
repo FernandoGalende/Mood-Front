@@ -1,0 +1,4 @@
+<div class="anonymous-container">
+  <app-thoughts-detail (handleDelete)="onDeleteThought()" *ngIf="selectedThought" [thought]="selectedThought" [anonymous]="true"
+    [isHrView]="false"></app-thoughts-detail>
+</div>

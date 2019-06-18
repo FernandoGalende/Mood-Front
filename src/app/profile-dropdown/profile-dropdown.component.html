@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="dropdown-caret">
+    <span class="caret-outer"></span>
+    <span class="caret-inner"></span>
+  </div>
+  <div class="tinted-image">
+    <span [ngStyle]="{'background-image': 'url(' + userInfo.picture + ')'}" class="image-text"></span>
+  </div>
+  <div class="info">
+    <p class="name">{{ userInfo.name }}</p>
+    <p class="email">{{ userInfo.sub.split("|")[2] }}</p>
+  </div>
+  <button type="button" class="logout" (click)="onLogout($event)">
+    <span class="logout-message">Logout</span>
+  </button>
+</div>

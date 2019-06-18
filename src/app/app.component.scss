@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    margin-right: 10px;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 183px 183px repeat(10, 1fr);
+    grid-template-rows: 80px repeat(7, 1fr);
+    grid-template-areas: 'navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar' 'sidebar sidebar content content content content content content content content content content' 'sidebar sidebar content content content content content content content content content content' 'sidebar sidebar content content content content content content content content content content' 'sidebar sidebar content content content content content content content content content content' 'sidebar sidebar content content content content content content content content content content' 'sidebar sidebar content content content content content content content content content content' 'sidebar sidebar content content content content content content content content content content';
+    height: 100vh;
+}
+
+.sidebar {
+    /*grid-area: 3/1/12/3; */
+    grid-area: sidebar;
+    grid-row-start: 1;
+    width: 366px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    position: fixed;
+}
+
+.navbar {
+    grid-area: navbar;
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.home {
+    grid-area: content;
+}
+
+.suggestions {
+    grid-area: content;
+}
+
+app-messages {
+    grid-area: content;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 13;
+    -ms-grid-row-align: start;    
+    z-index: 9999;
+}
+
+.env_localhost {
+    background-color: #00AD3B;
+}
+
+.env_development {
+    background-color: #FFBF00;
+}
+
+.env_production {
+    background-color: #F50038;
+}
+
+.top_bar {
+    color: white;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    top: calc(100% - 40px);
+}
+
+@media only screen and (max-width: 1910px) {
+    .grid-container {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 80px repeat(7, 12fr);
+        grid-template-areas: 'navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar navbar' 'content content content content content content content content content content content content' 'content content content content content content content content content content content content' 'content content content content content content content content content content content content' 'content content content content content content content content content content content content' 'content content content content content content content content content content content content' 'content content content content content content content content content content content content' 'content content content content content content content content content content content content';
+        width: 100vw;
+        height: auto;
+    }
+    .mobile-menu {
+        grid-area: content;
+        background-color: rgba(255, 255, 255, 0.95);
+        z-index: 10;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        padding-top: 80px;
+    }
+    app-messages {
+        grid-area: content;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 13;
+        align-self: start;
+        justify-self: center;               
+        z-index: 9999;
+    }
+    .top_bar {
+        color: white;
+        height: 40px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        font-size: 14px;
+    }
+    .sidebar {
+        display:none;
+    }
+}

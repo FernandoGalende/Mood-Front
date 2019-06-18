@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>6B0A3FF4-77A0-4A3F-B6EB-26C3D0183D30</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <circle id="path-1" cx="22.5" cy="22.5" r="22.5"></circle>
+    </defs>
+    <g id="UI-desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mood_dashboard_HR_datepicker" transform="translate(-866.000000, -915.000000)">
+            <g id="anonymous" transform="translate(866.000000, 915.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#005FFF" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <g id="anonymous-copy-2" mask="url(#mask-2)"></g>
+                <g id="Group-13" mask="url(#mask-2)" fill="#FFD800">
+                    <g transform="translate(7.000000, 11.000000)">
+                        <circle id="Oval" cx="15.7443946" cy="8.74439462" r="8.74439462"></circle>
+                        <path d="M15.2980429,19 C24.1974811,19 30.733006,25.8609865 30.733006,34.3363229 L0.0021334234,34.3363229 C-0.136920299,25.8609865 6.53765836,19 15.2980429,19 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

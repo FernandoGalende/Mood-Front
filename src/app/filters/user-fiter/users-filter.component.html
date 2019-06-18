@@ -1,0 +1,6 @@
+<div class="users-filter">
+    <div class="users-filter__container">
+        <label class="users-filter__label">Filter by users:</label>
+        <app-user-chips [showAllSuggestions]="true" (users)="onUsersAdded($event)"></app-user-chips>
+    </div>
+</div>

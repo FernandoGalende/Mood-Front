@@ -1,0 +1,18 @@
+:host(.anonymous-suggestion) {
+    grid-area: content;
+    align-self: start;
+    grid-column-start: 0;
+    grid-column-end: 13;
+}
+
+.anonymous-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    margin-top: 6.3vh;
+}
+
+@media only screen and (max-width: 1400px) {
+    .anonymous-container {
+        margin-bottom: calc(6.3vh + 40px);
+    }
+}

@@ -1,0 +1,142 @@
+.container {
+    display: flex;
+    background-color: white;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;  
+    min-height: 179px;
+    width: 490px;
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;    
+    flex-direction: column;
+    
+    
+    &-wrapper {
+        position: absolute;
+        top: 47px;
+        right: -6px;
+    }
+}
+
+.info {       
+    align-self: center;
+    width: 428px;
+    &::after{
+        content: '';
+        display: block;
+        height: 1px;
+        background-color: #ffd800;
+        width: 428px;
+        margin-top:20px;
+        margin-bottom: 15px;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+    
+.info__date {
+  width: 428px;
+  height: auto;
+  font-family: Karla;
+  font-weight: bold;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.2;
+  letter-spacing: normal;
+  color: #00ad3b;
+  margin-top: 1%;
+  padding-bottom: 0px; 
+}
+
+.info__name {   
+    font-family: Karla;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #4a4a4a;   
+    margin-bottom: 0px; 
+}
+
+.info__text {   
+    font-family: Karla;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    color: #4a4a4a;    
+    margin-bottom: 0px; 
+}
+
+.dropdown-caret {
+    right: 12px;
+    position: absolute;
+    top: -10px;
+    left: auto;
+    width: 18px;
+    height: 10px;
+    float: left;
+    overflow: hidden;
+}
+
+.caret-outer {
+    border-bottom: 10px solid #657786;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    height: auto;
+    left: 0;
+    top: 0;
+    width: auto;
+    position: absolute;
+    display: inline-block;
+    margin-left: -1px;
+}
+
+.caret-inner {
+    top: 1px;
+    left: 1px;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid #fff;
+    border-bottom-color: #fff;
+    position: absolute;
+    display: inline-block;
+    margin-left: -1px;
+}
+
+
+.see-kudos {
+    width: 300px;
+    height: 19px;
+    font-family: Karla;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #005fff;    
+    margin-top: 10px;
+    text-decoration: underline;       
+    display: flex;
+    justify-content: left;
+    img{
+        margin-right: 8px;
+    }   
+ }
+
+

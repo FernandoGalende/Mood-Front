@@ -1,0 +1,21 @@
+<div class="mood-message-container">
+  <div class="header" *ngIf="userInfo">
+    <div class="user-info">
+      <div class="tinted-image">
+        <span class="image-text" [ngStyle]="{'background-image': 'url(' + userInfo.picture + ')'}">
+        </span>
+      </div>
+      <div class="user-name">
+        <span class="from">{{ userInfo.name }} {{ userInfo.lastName }}</span>
+        <br>
+        <span class="mood-date">{{ mood.date | date:'dd-LL-yyyy' }}</span>
+      </div>
+    </div>
+    <div class="mood-logo">
+      <img src="assets/images/{{ mood.mood }}.svg">
+    </div>
+  </div>
+  <div class="mood-content">
+    <span>{{ mood.message ? mood.message : 'No message was sent with this mood' }}</span>
+  </div>
+</div>

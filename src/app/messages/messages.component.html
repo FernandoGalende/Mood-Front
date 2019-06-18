@@ -1,0 +1,11 @@
+<div class="container" [ngStyle]="{'background-color': levels[message.level]}">
+  <img class="received" src="assets/images/received.svg">
+  <div class="message-container">
+    <span class="message">{{ message.text }}</span>
+  </div>
+  <div class="wrapper" (click)="onRemove()">
+    <a class="remove-link">
+      <img src="assets/images/close.svg">
+    </a>
+  </div>
+</div>

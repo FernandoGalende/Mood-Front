@@ -1,0 +1,31 @@
+<div class="thoughts-container">
+  <app-thoughts-detail (handleDelete)="onDeleteThought()" *ngIf="selectedThought && !showError" [thought]="selectedThought"
+    [anonymous]="false" [isHrView]="false"></app-thoughts-detail>
+
+  <div class="placeholder-container" *ngIf="showError">
+    <div class="placeholder">
+      <span>Something went wrong, please try again later</span>
+    </div>
+  </div>
+
+  <div class="feed">
+    <div class="feed-header" [hidden]="searching">
+      <label class="title">All messages</label>
+      <!-- <label class="search-icon">
+        <a (click)="isSearching()"><img src="assets/images/group.svg"></a>
+      </label> -->
+    </div>
+    <!-- <div class="header-search" [hidden]="!searching">
+      <input type="text" placeholder="Search">
+      <label class="search-icon">
+        <a (click)="isSearching()"><img src="assets/images/group.svg"></a>
+      </label>
+    </div> -->
+    <div class="thoughts-feed-container">
+      <app-mini-thought [ngClass]="{'selected': selectedIndex === i}" (thoughtSelected)="onThoughtSelected($event, i)"
+        [thought]="thought" *ngFor="let thought of thoughts; let i = index"></app-mini-thought>
+      <app-paginator (navigationPrevious)="onNavigationPrevious()" (navigationNext)="onNavigationNext()" [next]="blockNext"
+        [previous]="blockPrevious"></app-paginator>
+    </div>
+  </div>
+</div>

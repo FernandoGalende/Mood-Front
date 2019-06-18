@@ -1,0 +1,11 @@
+<div class="container" (click)="handleFocus()">
+  <div class="selected-users" *ngFor="let user of userChips">
+    <app-chip [user]="user" (remove)="onRemove(user)"></app-chip>
+  </div>
+  <input #userInput type="text" (keyup)="onKeyUp($event)">
+</div>
+<ul class="recommendations">
+  <li class="recommendation" *ngFor="let user of recommendedUsers" (click)="addChip(user)">
+    <span>{{ user.name }}</span>
+  </li>
+</ul>

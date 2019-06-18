@@ -1,0 +1,17 @@
+<label class="title">Mood messages</label>
+<div class="mood-messages" *ngIf="!showError && !showPlaceholder">
+    <div class="mood-messages-container">
+        <app-mood-message class="mood-message-component" *ngFor="let message of moods" [mood]="message"></app-mood-message>
+    </div>
+    <app-paginator (navigationPrevious)="onNavigationPrevious()" (navigationNext)="onNavigationNext()" [next]="blockNext" [previous]="blockPrevious"></app-paginator>
+</div>
+<div class="placeholder-container" *ngIf="showError">
+    <div class="placeholder">
+        <span>Something went wrong, please try again later</span>
+    </div>
+</div>
+<div class="empty-container" *ngIf="showPlaceholder">
+    <div class="placeholder">
+        <span>There are no moods yet!</span>
+    </div>
+</div>

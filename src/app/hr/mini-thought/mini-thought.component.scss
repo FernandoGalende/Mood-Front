@@ -1,0 +1,154 @@
+.mini-thought-container {
+    width: 212px; // margin-bottom: 28px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px -4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    position: relative;
+    padding: 20px;
+}
+
+.header {
+    align-self: center;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 65%;
+}
+
+.tinted-image {
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.image-text {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-position: center;
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+}
+
+.user-name {
+    padding-left: 15px;
+    .from {
+        display: block;
+        width: 110px;
+        font-family: Karla;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        color: #4a4a4a;
+        margin-bottom: 5px;
+    }
+    .mood-date {
+        display: block;
+        width: 237px;
+        height: 15px;
+        font-family: Karla;
+        font-size: 10px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.2;
+        letter-spacing: normal;
+        color: #00ad3b;
+    }
+}
+
+.read-logo {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #005fff;
+}
+
+.answered-logo {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.mini-thought-content {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 172px;
+    height: 35%;
+    margin-top: 5px;
+    span {
+        font-family: Karla;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.43;
+        letter-spacing: normal;
+        color: #4a4a4a;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .mini-thought-container {
+        width: 412px; // margin-bottom: 28px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px -4px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        position: relative;
+        padding: 40px;
+    }
+    .tinted-image {
+        border-radius: 50%;
+        overflow: initial;
+        display: flex;
+        align-items: center;
+    }
+    .image-text {
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        background-position: center;
+        background-size: contain;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+    }
+    .header {
+        width: 412px;
+    }
+    .user-name {
+        .from {
+            width: 100%;
+            padding: 4px 0;
+            font-family: Karla;
+            font-size: 16px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.25;
+            letter-spacing: normal;
+            color: #4a4a4a;
+        }
+    }
+    .mini-thought-content {
+        width: auto;
+    }
+}

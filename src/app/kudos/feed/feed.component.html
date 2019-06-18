@@ -1,0 +1,8 @@
+<label class="title">Latest kudos</label>
+<label class="create-new">
+  <a class="new-link" routerLink="/kudos/new">+ new</a>
+</label>
+<div class="feed-container">
+  <app-mini-kudo [kudo]="kudo" class="kudos" *ngFor="let kudo of kudos">
+  </app-mini-kudo>
+</div>

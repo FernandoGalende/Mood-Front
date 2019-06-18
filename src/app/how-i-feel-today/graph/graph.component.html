@@ -1,0 +1,10 @@
+<label class="title">
+  <span>How people feel today</span>
+</label>
+<div class="content" *ngIf="showChart" (window:resize)="onResize($event)">
+  <div class="people-title">
+    <span>{{this.graphData.people}} people voted so far</span>
+  </div>
+  <app-chart-horizontal [graphData]="graphData" *ngIf="windowWidth > 1150"></app-chart-horizontal>
+  <app-chart-vertical [graphData]="graphData" *ngIf="windowWidth <= 1150"></app-chart-vertical>
+</div>

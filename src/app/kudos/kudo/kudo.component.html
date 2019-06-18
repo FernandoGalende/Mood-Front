@@ -1,0 +1,22 @@
+<div class="kudo-container">
+    <div class="header" *ngIf="userFromInfo && userToInfo">
+        <div class="user-info">
+            <div class="tinted-image">
+                <div [ngStyle]="{'background-image': 'url(' + userFromInfo.picture + ')'}" class="image-text from"></div>
+                <div [ngStyle]="{'background-image': 'url(' + userToInfo.picture + ')'}" class="image-text to"></div>
+            </div>
+            <div class="user-name">
+                <span class="from">{{ userFromInfo.name }} {{ userFromInfo.lastName }}</span>
+                <br>
+                <span class="to">
+                    to {{ userToInfo.name }} {{ userToInfo.lastName }}</span>
+            </div>
+        </div>
+        <div class="kudo-logo">
+            <img src="assets/images/kudos-copy.svg">
+        </div>
+    </div>
+    <div class="content">
+        <span>{{ kudo.message }}</span>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+.container {
+    height: 30px;
+    border-radius: 2px;
+    background-color: #005fff;
+    padding: 4px 0 5px 8px;
+    span {
+        font-family: Karla;
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.31;
+        letter-spacing: normal;
+        color: #ffffff;
+    }
+}
+
+
+.wrapper {
+    display: inline-flex;
+    cursor: pointer;
+    padding: 0 8px;
+}
+
+img {
+    padding-bottom: 2px;
+    width: 9.9px;
+    height: 9px;
+    object-fit: contain;
+}
+@media only screen and (max-width: 1150px) {
+    .container {
+        height: 30px;
+        border-radius: 2px;
+        background-color: #005fff;
+        padding: 4px 0 5px 8px;
+        span {
+            font-family: Karla;
+            font-size: 14px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.31;
+            letter-spacing: normal;
+            color: #ffffff;
+        }
+    }
+}

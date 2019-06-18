@@ -1,0 +1,29 @@
+<div class="sidebar-container">
+  <a class="wrap" routerLink="/moods" routerLinkActive="active" (click)="hideMenu()">
+    <img src="assets/images/pretty-good.svg" alt="good" style="height: auto; width: 20px;">
+    <div>How do I feel today?</div>
+  </a>
+  <a class="wrap" routerLink="/kudos" routerLinkActive="active" (click)="hideMenu()">
+    <img src="assets/images/kudos.svg" alt="kudos" style="height:auto; width: 20px;">
+    <div>Kudos</div>
+  </a>
+  <a class="wrap" routerLink="/suggestions" routerLinkActive="active" (click)="hideMenu()">
+    <img src="assets/images/i-want-to.svg" alt="Share your thoughts" style="height: auto; width: 20px;">
+    <div>Share your thoughts</div>
+  </a>
+  <a class="wrap" routerLink="/suggestions/mine" routerLinkActive="active">
+    <img src="assets/images/reply.svg" alt="Share your thoughts" style="height: auto; width: 20px;">
+    <div>My thoughts</div>
+  </a>
+  <div class="hr-sidebar" *ngIf="isHrGroup()">
+    <hr align="left">
+    <a class="wrap" routerLink="/hr" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <img src="assets/images/awesome.svg" alt="office moods" style="height: auto; width: 20px;">
+      <div>Office Mood</div>
+    </a>
+    <a class="wrap" routerLink="/hr/thoughts" routerLinkActive="active">
+      <img src="assets/images/messages.svg" alt="thoughts" style="height: auto; width: 20px;">
+      <div>Thoughts</div>
+    </a>
+  </div>
+</div>

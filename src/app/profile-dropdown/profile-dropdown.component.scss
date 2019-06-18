@@ -1,0 +1,144 @@
+.container {
+    display: grid;
+    background-color: white;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+    grid-template-areas:
+        "photo info"
+        "photo info"
+        "photo logout";
+    min-height: 179px;
+    width: 460px;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    right: 184px;
+    padding: 20px;
+}
+
+.logout-button {
+    cursor: pointer;
+    width: 292px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #ffd800;
+    margin-bottom: 60px;
+}
+
+.image-text {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    background-position: center;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+}
+
+.tinted-image {
+    grid-area: photo;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient( rgba(0, 95, 255, 0.7), rgba(0, 95, 255, 0.7));
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    grid-area: info;
+    align-self: end;
+}
+
+.name {
+    width: 214px;
+    font-family: Karla;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4a4a4a;
+    margin-bottom: 3%;
+}
+
+.email {
+    width: 234px;
+    height: 19px;
+    font-family: Karla;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4a4a4a;
+    margin-bottom: 8%;
+}
+
+.dropdown-caret {
+    right: 12px;
+    position: absolute;
+    top: -10px;
+    left: auto;
+    width: 18px;
+    height: 10px;
+    float: left;
+    overflow: hidden;
+}
+
+.caret-outer {
+    border-bottom: 10px solid #657786;
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    height: auto;
+    left: 0;
+    top: 0;
+    width: auto;
+    position: absolute;
+    display: inline-block;
+    margin-left: -1px;
+}
+
+.caret-inner {
+    top: 1px;
+    left: 1px;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 9px solid #fff;
+    border-bottom-color: #fff;
+    position: absolute;
+    display: inline-block;
+    margin-left: -1px;
+}
+
+.logout {
+    grid-area: logout;
+    align-self: start;
+    cursor: pointer;
+    width: 234px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #ffd800;
+    border: 0;
+    outline: none;
+}
+
+.logout-message {
+    width: 106px;
+    height: 19px;
+    font-family: Karla;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4a4a4a;
+}

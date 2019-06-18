@@ -1,0 +1,27 @@
+.paginator-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: calc(6.3vh + 40px);
+    a {
+        margin: 60px 28px 0 0;
+        cursor: pointer;
+        text-decoration: none;
+        outline: none;
+    }
+    a:last-child {
+        margin: 60px 0 0 0;
+    }
+    img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+    }
+}
+
+.beginning {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: auto;
+}

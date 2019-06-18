@@ -1,0 +1,70 @@
+stages:
+  - lint
+  - test
+  - build
+  - deploy
+
+before_script:
+  - npm install -g @angular/cli
+  - npm install
+
+linting-application:
+  stage: lint
+  image: node:latest
+  script:
+    - echo "Testing lints"
+    - ng lint
+
+testing-application:
+  stage: test
+  image: cypress/base
+  script:
+    - ng serve &
+    - sleep 20
+    - echo "Testing application"
+    - $(npm bin)/cypress run
+
+building-application:
+  stage: build
+  image: node:latest
+  script:
+    - echo "Buildig app..."
+    - ng build --configuration=production --prod
+
+deploying-application-dev:
+  stage: deploy
+  image: python:latest
+  dependencies:
+    - building-application
+  before_script: []
+  script:
+    - pip install awscli
+    - curl -sL https://deb.nodesource.com/setup_8.x | bash -
+    - apt-get install -y nodejs
+    - npm install
+    - npm install -g @angular/cli
+    - ng build --configuration=dev --prod
+    - echo "Deploying app to dev..."
+    - aws s3 sync ./dist s3://$AWS_BUCKET_DEV --acl public-read --delete
+  only:
+    - dev
+  when: manual
+
+deploying-application-master:
+  stage: deploy
+  image: python:latest
+  before_script: []
+  dependencies:
+    - building-application
+  script:
+    - pip install awscli
+    - curl -sL https://deb.nodesource.com/setup_8.x | bash -
+    - apt-get install -y nodejs
+    - npm install
+    - npm install -g @angular/cli
+    - ng build --configuration=production --prod
+    - echo "Deploying app to master..."
+    - aws s3 sync ./dist s3://$AWS_BUCKET_PROD --acl public-read --delete
+  only:
+    - master
+  when: manual

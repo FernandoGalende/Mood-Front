@@ -1,0 +1,57 @@
+<label class="title">Share your thoughts</label>
+
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+    <div class="thoughts-container original" *ngIf="thought && user">
+      <div class="user-info">
+        <div class="tinted-image">
+          <span [ngStyle]="{'background-image': 'url(' + user.picture + ')'}" class="image-text"></span>
+        </div>
+        <div class="user">
+          <span class="name">{{ user.name }} {{ user.lastName }}</span>
+          <br>
+          <span class="mood-date">{{thought.date | date: 'dd-MM-yyyy'}} </span>
+        </div>
+      </div>
+      <div class="content">
+        <span>{{ thought.message }}</span>
+      </div>
+    </div>
+    <hr>
+    <div class="thoughts-container" *ngIf="thought.conversation && user">
+      <div class="thoughts-container" [ngClass]="{'hr-answer': msg.user === 'hr'}" *ngFor="let msg of thought.conversation">
+        <div class="user-info">
+          <div class="tinted-image">
+            <span [ngStyle]="{'background-image': 'url(' + getUserPicture(msg) + ')'}" class="image-text"></span>
+          </div>
+          <div class="user">
+            <span class="name">{{ msg.user === 'hr' ? 'HR' : user.name + user.lastName }}</span>
+            <br>
+            <span class="mood-date">Replied on {{msg.date | date: 'dd-MM-yyyy'}} </span>
+          </div>
+        </div>
+        <div class="content">
+          <span>{{ msg.message }}</span>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <div class="reply-trash-container">
+      <div class="buttons">
+        <a class="reply" [ngClass]="{'active': showResponse}" (click)=showHideResponse()>Reply</a>
+      </div>
+    </div>
+    <div class="container-message" [hidden]="!showResponse">
+      <div class="container-hint-counter">
+        <div class="message">
+          <label class="hint">Type your message:</label></div>
+        <div id="counter">{{message.value.length}} / 500</div>
+      </div>
+      <textarea #message class="user-text" formControlName="message" placeholder="Writte a reply"></textarea>
+      <button type="submit" class="submit-button" [disabled]="!form.valid">
+        <span class="submit-message" [hidden]="loading">Send</span>
+        <img class="loading" [hidden]="!loading" src="assets/loading.svg" alt="loading">
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,108 @@
+:host(.graph) {
+    grid-area: graph;
+    -ms-grid-row-align: start;
+    align-self: start;
+    -ms-grid-column: 4;
+    grid-column-start: 4;
+    -ms-grid-column-span: 4;
+    grid-column-end: 5;
+    -ms-grid-row: 5;
+    grid-row-start: 4;
+    -ms-grid-row-span: 5;
+    -ms-grid-column-align: end;
+    margin-top: 84px;
+}
+
+.title {
+    height: 28px;
+    font-family: Karla;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4a4a4a;
+    display: flex;
+    justify-content: baseline;
+    margin-bottom: 25px;
+    margin-top: 74px;
+    span {
+        box-sizing: border-box;
+        width: 100%;
+        text-align: left;
+        height: 28px;
+        margin-bottom: 20px;
+    }
+}
+
+.people-title {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 19px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 612px;
+    height: 331px;
+    box-shadow: 0 2px 8px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-bottom: calc(6.3vh + 40px);
+}
+
+.images-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.percent {
+    padding-top: 10px;
+    text-align: center;
+    background-color: red;
+}
+
+@media only screen and (max-width: 1910px) {
+    :host(.graph) {
+        grid-area: graph;
+        align-self: start;
+        justify-self: center;
+        margin-top: 30px;
+    }
+    .title {
+        margin-top: 0px;
+        margin-bottom: 21px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    :host(.graph) {
+        margin-top: 50px;
+    }
+    .content {
+        width: 280px;
+        height: 500px;
+    }
+    .title {
+        span {
+            font-size: 20px;
+        }
+    }
+    .people-title {
+        display: flex;
+        justify-content: center;
+        font-family: Karla;
+        font-size: 14px;
+        color: #4a4a4a;
+        span {
+            box-sizing: border-box;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

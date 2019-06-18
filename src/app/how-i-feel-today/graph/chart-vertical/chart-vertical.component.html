@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="images-container">
+    <div class="icons" *ngFor="let e of graphData.percentages">
+      <div class="percent">{{e.percent}}%</div>
+      <img src="assets/images/{{ e.name }}.svg" width="30px">
+    </div>
+  </div>
+
+  <div class="chart-container">
+    <canvas #canvas>{{ chartVertical }}</canvas>
+  </div>
+</div>

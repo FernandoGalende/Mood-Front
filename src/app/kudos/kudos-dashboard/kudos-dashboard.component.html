@@ -1,0 +1,25 @@
+<app-filters [showUsersFilter]="true"></app-filters>
+
+<div>
+  <label class="title">Kudos</label>
+  <label class="create-new">
+    <a class="new-link" routerLink="new">+ create new</a>
+  </label>
+  <div class="kudos" *ngIf="!showError && !showPlaceholder">
+    <div class="container">
+      <app-kudo [kudo]="kudo" class="kudos" *ngFor="let kudo of kudos"></app-kudo>
+    </div>
+    <app-paginator (navigationPrevious)="onNavigationPrevious()" (navigationNext)="onNavigationNext()" [next]="blockNext"
+      [previous]="blockPrevious"></app-paginator>
+  </div>
+  <div class="error-container" *ngIf="showError">
+    <div class="placeholder">
+      <span>Something went wrong, please try again later</span>
+    </div>
+  </div>
+  <div class="empty-container" *ngIf="showPlaceholder">
+    <div class="placeholder">
+      <span>There are no kudos yet!</span>
+    </div>
+  </div>
+</div>

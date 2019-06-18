@@ -1,0 +1,70 @@
+.title {
+  height: 7.4vh;
+  font-family: Karla;
+  font-size: 6px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4a4a4a;
+  display: flex;
+  justify-content: baseline;
+
+  span {
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    padding-top: 40px;
+  }
+}
+canvas {
+  margin: 0px;
+  padding: 0px;
+  align-items: center;
+}
+
+.container {
+  background-color: #ffffff;
+  width: 280px;
+  margin-top: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  img {
+    margin-left: 10px;
+  }
+}
+
+.images-container { 
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  padding-top: 0px;
+  margin-top: 20px;
+  margin-bottom: 21px;
+  .percent {
+    display: flex;
+    align-items: center;   
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 16px;
+  }
+}
+
+.chart-container {
+  position: relative;
+  height: 400px;
+  width: 160px;
+}

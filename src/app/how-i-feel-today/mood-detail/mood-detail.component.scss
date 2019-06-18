@@ -1,0 +1,209 @@
+:host(.mood-detail) {
+    grid-area: moods;
+    -ms-grid-row-align: start;
+    align-self: start;
+    -ms-grid-column: 1;
+    grid-column-start: 4;
+    -ms-grid-column-span: 4;
+    grid-column-end: 5;
+    -ms-grid-row: 1;
+    grid-row-start: 1;
+    -ms-grid-row-span: 4;
+    grid-row-end: 6;
+    -ms-grid-column-align: end;
+    justify-self: end;
+    margin-top: 6.3vh;
+}
+
+.mood-detail-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    height: 28px;
+    font-family: Karla;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "mood mood mood" "text text text" "submit submit submit";
+    justify-items: center;
+    width: 612px;
+    height: 469px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px -4px rgba(0, 0, 0, 0.25);
+}
+
+.selectedMood {
+    grid-area: mood;
+    justify-self: center;
+    align-self: center;
+    margin: 60px 0 30px 0;
+}
+
+.form {
+    grid-area: text;
+    width: 452px;
+    justify-self: center;
+}
+
+.message {
+    margin-bottom: 13px;
+}
+
+.hint {
+    margin-bottom: 10px;
+    height: 19px;
+}
+
+.inputs {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="checkbox"].input-checkbox {
+    margin: 4px 7px;
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    border: solid 1px #4a4a4a;
+}
+
+textarea {
+    resize: none;
+    outline: none;
+    width: 452px;
+    height: 100px;
+    border-radius: 4px;
+    border: solid 1px #dcdcdc;
+    padding: 14px 4px 14px 20px;
+}
+
+.submit-button {
+    grid-area: submit;
+    justify-self: center;
+    align-self: end;
+    cursor: pointer;
+    width: 452px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #ffd800;
+    margin-bottom: 60px;
+    border: 0;
+    outline: none;
+}
+
+.submit-message {
+    width: 204px;
+    height: 19px;
+    font-family: Karla;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #4a4a4a;
+}
+
+.loading {
+    width: 30px;
+    height: 30px;
+}
+
+#counter {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #4a4a4a;
+}
+
+@media only screen and (max-width: 1910px) {
+    :host(.mood-detail) {
+        grid-area: moods;
+        align-self: start;
+        justify-self: end;
+        margin-top: 6.3vh;
+        margin-bottom: 6.3vh;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "mood mood mood" "text text text" "submit submit submit";
+        justify-items: center;
+        width: 280px;
+        height: 575px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 8px -4px rgba(0, 0, 0, 0.25);
+    }
+    textarea {
+        resize: none;
+        outline: none;
+        width: 240px;
+        height: 210px;
+        border-radius: 4px;
+        border: solid 1px #dcdcdc;
+    }
+    .form {
+        grid-area: text;
+        width: 240px;
+        justify-self: center;
+    }
+    .submit-button {
+        grid-area: submit;
+        justify-self: center;
+        align-self: end;
+        cursor: pointer;
+        width: 240px;
+        height: 50px;
+        border-radius: 4px;
+        background-color: #ffd800;
+        margin-bottom: 60px;
+        border: 0;
+        outline: none;
+    }
+    .inputs {
+        display: flex;
+        flex-direction: column;
+    }
+    input[type="checkbox"].input-checkbox {
+        margin-top: 20px;
+        width: 15px;
+        height: 15px;
+        border-radius: 4px;
+        border: solid 1px #4a4a4a;
+    }
+    .selectedMood {
+        grid-area: mood;
+        justify-self: center;
+        align-self: center;
+        margin: 40px 0 30px 0;
+    }
+    #counter {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 14px;
+        margin-bottom: 5px;
+        width: 100%;
+        color: #4a4a4a
+    }
+}

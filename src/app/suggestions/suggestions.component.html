@@ -1,0 +1,22 @@
+<label class="title">Share your thoughts ...</label>
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+    <div class="message">
+      <div class="container-input">
+        <p>Type your message:</p>
+        <div class="checkbox">
+          <input class="input-checkbox" type="checkbox" id="anonymous-checkbox" formControlName="anonymous">
+          <label class="label-checkbox" for="anonymous-checkbox">
+            Send anonymous
+          </label>
+        </div>
+      </div>
+      <textarea class="user-text" formControlName="message" #message maxlength="500" placeholder="Have a suggestion for how to improve things around here? Or is there something that's bothering you? Feel free to share your thoughts, give us your best tips and more."></textarea>
+    </div>
+    <div id="counter">{{message.value.length}} / 500</div>
+    <button type="submit" class="submit-button" [disabled]="!form.valid" [ngClass]="{'ready': form.valid, 'submit-button': !form.valid}">
+      <span class="submit-message" [hidden]="loading">Send</span>
+      <img class="loading" [hidden]="!loading" src="assets/loading.svg" alt="loading">
+    </button>
+  </form>
+</div>

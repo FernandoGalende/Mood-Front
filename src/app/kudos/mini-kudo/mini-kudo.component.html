@@ -1,0 +1,15 @@
+<div class="kudo-container">
+  <div class="header" *ngIf="userInfo">
+    <div class="user-info">
+      <div class="tinted-image">
+        <span [ngStyle]="{'background-image': 'url(' + userInfo.picture + ')'}" class="image-text"></span>
+      </div>
+      <div class="user-name">
+        <span class="from">{{ userInfo.name }} {{ userInfo.lastName }}</span>
+      </div>
+    </div>
+    <div class="kudo-logo">
+      <img src="assets/images/kudos-copy.svg">
+    </div>
+  </div>
+</div>

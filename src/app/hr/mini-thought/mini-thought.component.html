@@ -1,0 +1,21 @@
+<div class="mini-thought-container" (click)="onThoughtSelected()">
+  <div class="header" *ngIf="userInfo">
+    <div class="user-info">
+      <div class="tinted-image">
+        <span [ngStyle]="{'background-image': 'url(' + userInfo.picture + ')'}" class="image-text"></span>
+      </div>
+      <div class="user-name">
+        <span class="from">{{ userInfo.name }} {{ userInfo.lastName }}</span>
+        <span class="mood-date">{{ thought.date | date: 'dd-MM-yyyy' }}</span>
+      </div>
+    </div>
+    <div class="read-logo" *ngIf="!thought.read">
+    </div>
+    <div class="answered-logo" *ngIf="thought.answered">
+      <img src="assets/images/reply.svg">
+    </div>
+  </div>
+  <div class="mini-thought-content">
+    <span>{{ thought.message }}</span>
+  </div>
+</div>

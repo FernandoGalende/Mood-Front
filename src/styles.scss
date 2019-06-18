@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import 'node_modules/perfect-scrollbar/css/perfect-scrollbar.css';
+body {
+    background-color: #f7f8fa;
+    font-family: 'Karla', sans-serif;
+}
+
+.ps__rail-x,
+.ps__rail-y {
+    opacity: 0.6;
+}

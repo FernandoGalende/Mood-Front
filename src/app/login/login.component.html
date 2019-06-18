@@ -1,0 +1,26 @@
+<label class="title">Log in</label>
+<div class="login">
+  <div>
+    <img src="assets/images/mood-logo.svg" class="mood-logo">
+  </div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="input-field">
+      <div class="field">
+        <label class="info">Email:</label>
+        <input type="text" formControlName="email">
+      </div>
+
+      <div class="field">
+        <label class="info">Password:</label>
+        <input type="password" formControlName="password">
+      </div>
+
+      <button type="submit" [disabled]="!form.valid" [ngClass]="{'ready': form.valid, 'submit-button': !form.valid}">
+        <span class="submit-message">Login</span>
+      </button>
+    </div>
+  </form>
+  <div *ngIf="err" class="error">
+    <span>{{err}}</span>
+  </div>
+</div>

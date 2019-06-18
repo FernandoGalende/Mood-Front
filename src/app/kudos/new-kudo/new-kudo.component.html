@@ -1,0 +1,26 @@
+<label class="title">Write a Kudos</label>
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+        <div class="recipient">
+            <label>Send kudos to:</label>
+            <app-user-chips (users)="onUsersAdded($event)"></app-user-chips>
+        </div>
+        <div class="message">
+            <div class="anonymous">
+                <label class="hint">Type your message:</label>
+                <div class="checkbox">
+                    <input class="input-checkbox" type="checkbox" id="anonymous-checkbox" formControlName="anonymous">
+                    <label class="label-checkbox" for="anonymous-checkbox">
+                        Send anonymous
+                    </label>
+                </div>
+            </div>
+            <textarea #message class="user-text" formControlName="message" maxlength="500" placeholder="Show your appreciation"></textarea>
+            <div id="counter">{{message.value.length}} / 500</div>
+        </div>
+        <button type="submit" class="submit-button" [disabled]="loading || !form.valid">
+            <span class="submit-message" [hidden]="loading">Send</span>
+            <img class="loading" [hidden]="!loading" src="assets/loading.svg" alt="loading">
+        </button>
+    </form>
+</div>
