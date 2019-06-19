@@ -16,7 +16,7 @@ export class SidebarComponent implements OnInit {
 
   isHrGroup() {
     if (this._auth.isAuthenticated()) {
-      const groups = this._auth.getUserInfo()['https://mood.payvision.app/']
+      const groups = this._auth.getUserInfo()['<prodURl>']
         .groups;
       return groups && groups.includes('HR');
     }

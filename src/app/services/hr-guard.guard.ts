@@ -24,7 +24,7 @@ export class HrGuard implements CanActivate {
   }
 
   belongsToHR() {
-    const { groups } = this._auth.getUserInfo()['https://mood.payvision.app/'];
+    const { groups } = this._auth.getUserInfo()['<prodURl>'];
     return groups && groups.includes('HR');
   }
 }
