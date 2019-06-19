@@ -1,8 +1,8 @@
 export const authConfig = {
-  domain: 'pvdev.eu.auth0.com',
-  audience: 'devmoodapi',
-  clientID: 'Ev0IvVZRQKiJ7X8LVg0xx49kEKruAn6v',
-  url: 'https://pvdev.eu.auth0.com'
+  domain: '',
+  audience: '',
+  clientID: '',
+  url: ''
 };
 
 export const environment = {
